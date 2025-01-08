@@ -1,0 +1,289 @@
+:root {
+    --primary-color: #5e60ce;
+    --secondary-color: #6930c3;
+    --accent-color: #64dfdf;
+    --background-dark: #1a1a1a;
+    --background-card: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --success-color: #00c853;
+    --warning-color: #ffd600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.mobile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+/* Header Styles */
+.app-header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    padding: 1.5rem 1rem;
+    border-radius: 0 0 25px 25px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+}
+
+.user-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main Content Styles */
+.app-content {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* Today's Workout Card */
+.workout-card {
+    background: var(--background-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.workout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.principal {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+}
+
+.exercise-list {
+    margin-bottom: 1.5rem;
+}
+
+.exercise-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exercise-item i {
+    color: var(--accent-color);
+}
+
+.sets {
+    margin-left: auto;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.start-workout-btn {
+    width: 100%;
+    background: var(--accent-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.start-workout-btn:active {
+    transform: scale(0.98);
+}
+
+/* Weekly Overview */
+.week-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    scrollbar-width: none;
+}
+
+.week-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.day-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    padding: 0.75rem;
+    background: var(--background-card);
+    border-radius: 15px;
+    position: relative;
+}
+
+.day-item.active {
+    background: var(--primary-color);
+}
+
+.day-item.current {
+    border: 2px solid var(--accent-color);
+}
+
+.day {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.date {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+
+.status.completed {
+    background: var(--success-color);
+}
+
+.status.current {
+    background: var(--warning-color);
+}
+
+.rest-day {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* Progress Section */
+.progress-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.progress-card {
+    background: var(--background-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.progress-info {
+    margin-bottom: 1rem;
+}
+
+.progress-detail {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+}
+
+.progress-chart {
+    height: 150px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-card);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0;
+    border-radius: 20px 20px 0 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.nav-item i {
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 500px) {
+    .mobile-container {
+        border-left: 1px solid var(--background-card);
+        border-right: 1px solid var(--background-card);
+    }
+}

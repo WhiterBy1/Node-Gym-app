@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymRats</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <header class="app-header">
+            <div class="profile-section">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Profile" class="profile-pic">
+                <div class="user-info">
+                    <h2>Felix Thompson</h2>
+                </div>
+            </div>
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Semanas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Fuerza</span>
+                    <span class="stat-label">Bloque</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">85%</span>
+                    <span class="stat-label">Objetivo</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="app-content">
+            <section class="weekly-overview">
+                <div class="workout-header"><h3>Planificaciones Semanales</h3> <a class="principal" >Buscar 🔎</a></div>
+                <div class="week-scroll">
+                    <div class="day-item active">
+                        <span class="day">Mon</span>
+                        <span class="date">15</span>
+                        <span class="status completed"></span>
+                    </div>
+                    <div class="day-item">
+                        <span class="day">Tue</span>
+                        <span class="date">16</span>
+                        <span class="status completed"></span>
+                    </div>
+                    <div class="day-item current">
+                        <span class="day">Wed</span>
+                        <span class="date">17</span>
+                        <span class="status current"></span>
+                    </div>
+                    <div class="day-item">
+                        <span class="day">Thu</span>
+                        <span class="date">18</span>
+                    </div>
+                    <div class="day-item">
+                        <span class="day">Fri</span>
+                        <span class="date">19</span>
+                    </div>
+                    <div class="day-item rest">
+                        <span class="day">Sat</span>
+                        <span class="date">20</span>
+                        <span class="rest-day">Rest</span>
+                    </div>
+                    <div class="day-item">
+                        <span class="day">Sun</span>
+                        <span class="date">21</span>
+                    </div>
+                </div>
+            </section>
+            <section class="today-workout">
+                <h3>Entrenamiento De Hoy</h3>
+                <div class="workout-card">
+                    <div class="workout-header">
+                        <h4>Pecho y Tríceps</h4>
+                        <span >Tiempo Total: <a class="principal" >1h 20min</a> </span>
+                    </div>
+                    <div class="exercise-list">
+                        <div class="exercise-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Press Banca</span>
+                            <span class="sets">4 × 8-12</span>
+                        </div>
+                        <div class="exercise-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Press Inclinado (barra)</span>
+                            <span class="sets">3 × 10</span>
+                        </div>
+                        <div class="exercise-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Extencion de Triceps</span>
+                            <span class="sets">3 × 12</span>
+                        </div>
+                    </div>
+                    <button class="start-workout-btn">
+                        Comenzar Entrenamiento <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="progress-section">
+                <h3>Recent Progress</h3>
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <div class="progress-info">
+                            <h4>Bench Press</h4>
+                            <p class="progress-detail">New PR: 225 lbs</p>
+                        </div>
+                        <div class="progress-chart">
+                            <canvas id="benchChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-info">
+                            <h4>Squat</h4>
+                            <p class="progress-detail">Volume: +15%</p>
+                        </div>
+                        <div class="progress-chart">
+                            <canvas id="squatChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workout</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
