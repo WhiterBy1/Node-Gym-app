@@ -1,9 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initializeCharts();
-    setupNavigation();
-});
-
-function initializeCharts() {
+export function initializeCharts() {
     const benchCtx = document.getElementById('benchChart').getContext('2d');
     const squatCtx = document.getElementById('squatChart').getContext('2d');
 
@@ -60,15 +55,5 @@ function initializeCharts() {
                 fill: false
             }]
         }
-    });
-}
-
-function setupNavigation() {
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-        });
     });
 }

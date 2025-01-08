@@ -287,3 +287,103 @@ h3 {
         border-right: 1px solid var(--background-card);
     }
 }
+/*Calendar*/
+.week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.calendar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.calendar-overlay.active {
+    display: flex;
+}
+
+.calendar-container {
+    background: var(--background-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calendar-day:hover {
+    background: var(--primary-color);
+}
+
+.calendar-day.current {
+    background: var(--accent-color);
+    color: var(--background-dark);
+}
+
+.calendar-day.other-month {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.close-calendar {
+    width: 100%;
+    background: var(--accent-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.week-scroll {
+    transition: transform 0.3s ease;
+}
+
+.day-item {
+    transition: all 0.3s ease;
+}

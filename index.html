@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="mobile-container">
         <header class="app-header">
@@ -34,40 +36,33 @@
 
         <main class="app-content">
             <section class="weekly-overview">
-                <div class="workout-header"><h3>Planificaciones Semanales</h3> <a class="principal" >Buscar 🔎</a></div>
-                <div class="week-scroll">
-                    <div class="day-item active">
-                        <span class="day">Mon</span>
-                        <span class="date">15</span>
-                        <span class="status completed"></span>
+                <div class="week-header">
+                    <h3>Semana Actual</h3>
+                    <button class="calendar-toggle" id="calendarToggle">
+                        <i class="fas fa-calendar-alt"></i>
+                    </button>
+                </div>
+
+                <div class="calendar-overlay" id="calendarOverlay">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="icon-btn" id="prevMonth">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <h4 id="currentMonth"></h4>
+                            <button class="icon-btn" id="nextMonth">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Calendario -->
+                        </div>
+                        <button class="close-calendar" id="closeCalendar">Close</button>
                     </div>
-                    <div class="day-item">
-                        <span class="day">Tue</span>
-                        <span class="date">16</span>
-                        <span class="status completed"></span>
-                    </div>
-                    <div class="day-item current">
-                        <span class="day">Wed</span>
-                        <span class="date">17</span>
-                        <span class="status current"></span>
-                    </div>
-                    <div class="day-item">
-                        <span class="day">Thu</span>
-                        <span class="date">18</span>
-                    </div>
-                    <div class="day-item">
-                        <span class="day">Fri</span>
-                        <span class="date">19</span>
-                    </div>
-                    <div class="day-item rest">
-                        <span class="day">Sat</span>
-                        <span class="date">20</span>
-                        <span class="rest-day">Rest</span>
-                    </div>
-                    <div class="day-item">
-                        <span class="day">Sun</span>
-                        <span class="date">21</span>
-                    </div>
+                </div>
+
+                <div class="week-scroll" id="weekScroll">
+                    <!-- Dias -->
                 </div>
             </section>
             <section class="today-workout">
@@ -75,23 +70,23 @@
                 <div class="workout-card">
                     <div class="workout-header">
                         <h4>Pecho y Tríceps</h4>
-                        <span >Tiempo Total: <a class="principal" >1h 20min</a> </span>
+                        <span>Tiempo Total: <a class="principal">1h 20min</a> </span>
                     </div>
                     <div class="exercise-list">
                         <div class="exercise-item">
                             <i class="fas fa-dumbbell"></i>
                             <span>Press Banca</span>
-                            
+
                         </div>
                         <div class="exercise-item">
                             <i class="fas fa-dumbbell"></i>
                             <span>Press Inclinado (barra)</span>
-                            
+
                         </div>
                         <div class="exercise-item">
                             <i class="fas fa-dumbbell"></i>
                             <span>Extencion de Triceps</span>
-                            
+
                         </div>
                     </div>
                     <button class="start-workout-btn">
@@ -101,12 +96,11 @@
             </section>
 
             <section class="progress-section">
-                <h3>Recent Progress</h3>
+                <h3>Estadisticas Principales</h3>
                 <div class="progress-cards">
                     <div class="progress-card">
                         <div class="progress-info">
-                            <h4>Bench Press</h4>
-                            <p class="progress-detail">New PR: 225 lbs</p>
+                            <h4>Volumen Semanal</h4>
                         </div>
                         <div class="progress-chart">
                             <canvas id="benchChart"></canvas>
@@ -114,8 +108,8 @@
                     </div>
                     <div class="progress-card">
                         <div class="progress-info">
-                            <h4>Squat</h4>
-                            <p class="progress-detail">Volume: +15%</p>
+                            <h4>Distribución Semanal</h4>
+                            <p class="progress-detail">Prioridad: Fuerza</p>
                         </div>
                         <div class="progress-chart">
                             <canvas id="squatChart"></canvas>
@@ -146,6 +140,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/main/main.js"></script>
 </body>
+
 </html>
