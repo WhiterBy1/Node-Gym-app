@@ -1,0 +1,61 @@
+{
+    "rutinas": [
+        {
+            "nombre_rutina": "Rutina de Fuerza",
+            "fecha": "2025-01-08",
+            "numero_ejercicios": 5,
+            "ejercicios": [
+                "Sentadillas",
+                "Press de banca",
+                "Peso muerto",
+                "Fondos",
+                "Remo con barra"
+            ]
+        },
+        {
+            "nombre_rutina": "Rutina de Cardio",
+            "fecha": "2025-01-09",
+            "numero_ejercicios": 3,
+            "ejercicios": [
+                "Correr en cinta",
+                "Bicicleta estática",
+                "Elíptica"
+            ]
+        },
+        {
+            "nombre_rutina": "Rutina de Full Body",
+            "fecha": "2025-01-10",
+            "numero_ejercicios": 6,
+            "ejercicios": [
+                "Sentadillas",
+                "Press militar",
+                "Curl de bíceps",
+                "Plancha",
+                "Ab twist",
+                "Elevaciones laterales"
+            ]
+        },
+        {
+            "nombre_rutina": "Rutina de Piernas",
+            "fecha": "2025-01-11",
+            "numero_ejercicios": 4,
+            "ejercicios": [
+                "Sentadillas",
+                "Prensa de pierna",
+                "Extensiones de pierna",
+                "Curl femoral"
+            ]
+        },
+        {
+            "nombre_rutina": "Rutina de Espalda",
+            "fecha": "2025-01-12",
+            "numero_ejercicios": 4,
+            "ejercicios": [
+                "Jalón al pecho",
+                "Remo con barra",
+                "Pull-over",
+                "Remo en máquina"
+            ]
+        }
+    ]
+}
